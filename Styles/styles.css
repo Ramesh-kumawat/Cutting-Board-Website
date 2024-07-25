@@ -37,6 +37,7 @@ ul {
 nav ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -73,8 +74,8 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
+  background-color: #d0cbcb;
   margin: 0 auto;
-  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(82, 95, 230, 0.1);
 }
@@ -128,36 +129,36 @@ tr:last-child td:last-child {
 
 /* Form styles */
 form {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1em;
-    border: 1px solid #333333;
-    background-color: rgba(160, 81, 45, 0.522);
-    border-radius: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #333333;
+  background-color: rgba(160, 81, 45, 0.522);
+  border-radius: 20px;
 }
 
 fieldset {
-    border: 1px solid #333333;
-    padding: 1em;
-    margin-bottom: 1em;
+  border: 1px solid #333333;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 legend {
-    font-weight: bold;
-    color: #000000;
+  font-weight: bold;
+  color: #000000;
 }
 
 label {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 /* Placeholder color */
 input::placeholder,
 textarea::placeholder {
-    color: #000000; /* Change this to your desired placeholder color */
+  color: #000000; /* Change this to your desired placeholder color */
 }
 
 input[type="text"],
@@ -166,35 +167,35 @@ input[type="tel"],
 input[type="date"],
 select,
 textarea {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 1em;
-    border: 1px solid #333333;
-    border-radius: 4px;
-    background-color: #cdab8d;
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 1em;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background-color: #cdab8d;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 button {
-    background-color: #20B2AA;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin-right: 10px;
-    cursor: pointer;
+  background-color: #1565c0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 button[type="reset"] {
-    background-color: #FF7F50;
+  background-color: #ff7f50;
 }
 
 button:hover {
-    background-color: #333333;
-    color: #fff;
+  background-color: #24ff4566;
+  color: #fff;
 }
 
 section {
@@ -338,7 +339,7 @@ main li {
 }
 
 #contact a {
-  color: #666600;
+  color: #b80101;
   text-decoration: none;
 }
 
@@ -361,7 +362,7 @@ main li {
 }
 
 a {
-  color: #823333;
+  color: #b80101;
   text-decoration: none;
 }
 
@@ -391,6 +392,58 @@ a {
 }
 .image img {
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  object-fit: cover;
+}
+
+audio,
+video {
+  width: 100%;
+  margin-top: 20px;
+  max-width: 700px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  padding: 2em;
+  text-align: center;
+}
+
+.media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.video-container,
+.audio-container {
+  background-color: rgba(244, 244, 244, 0.248);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 12px 14px 13px #0000006b;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+audio {
+  width: 300px; /* Adjust the width to make the audio player smaller */
+  margin: 0 auto; /* Center the audio player */
+}
+
+video {
+  width: 1000px; /* Adjust the width to make the audio player smaller */
+  margin: 0 auto;
+}
+
+audio,
+video {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 .team-member img {
@@ -412,8 +465,7 @@ a {
 }
 
 .product-images img {
-  max-width: 100%;
-  height: 400px;
+  max-width: 360px;
   margin: 0 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -440,14 +492,20 @@ a {
   }
 
   .map {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 90%;
   }
 
   nav ul {
     flex-direction: column;
     align-items: center;
     display: block;
+  }
+
+  audio,
+  video {
+    width: 100%;
+    margin-top: 20px;
   }
 
   nav ul li {
@@ -465,21 +523,22 @@ a {
   }
 
   .product-images {
+    width: 100%;
     flex-direction: column;
+    display: flex;
+    align-items: center;
   }
 
   .specials-content {
     flex-direction: column;
     align-items: center;
   }
-  .image img {
-    height: 100%;
-    width: 100%;
-  }
 
   .product-images img {
+    width: 90%;
+    max-width: 300px;
     height: auto;
-    margin: 12px;
+    margin: 12px 0;
   }
   h1 {
     margin-block-start: 0;

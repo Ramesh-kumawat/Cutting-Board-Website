@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cutting Boards - Contact Us</title>
     <link rel="stylesheet" href="Styles/styles.css">
 </head>
+
 <body>
     <header>
-        <a href="index.html"><img src="Images/cutting_board_logo.png" class="logo"></a> 
+        <a href="index.html"><img src="Images/cutting_board_logo.png" class="logo"></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,63 +23,102 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-    
+
     </header>
 
     <main>
-       
+
         <section>
-        <!-- <div class="container"> -->
+            <!-- <div class="container"> -->
             <h1>Contact Us</h1>
-            <p>We're here to help! Whether you have a question about our products, need assistance with an order, or just want to share your experience, we're all ears. Reach out to us through any of the options below.</p>
-        
+            <p>We're here to help! Whether you have a question about our products, need assistance with an order, or
+                just want to share your experience, we're all ears. Reach out to us through any of the options below.
+            </p>
+
             <div class="contact-method">
                 <h2>Email Us</h2>
-                <p>For general inquiries, please email us at <a href="mailto:support@cuttingboard.com">support@cuttingboard.com</a>. We'll do our best to respond within 24 hours.</p>
+                <p>For general inquiries, please email us at <a
+                        href="mailto:support@cuttingboard.com">support@cuttingboard.com</a>. We'll do our best to
+                    respond within 24 hours.</p>
             </div>
-        
+
             <div class="contact-method">
                 <h2>Call Us</h2>
                 <p>Our customer service team is available Monday to Friday, from 9 AM to 5 PM (EST).<br>
-                Phone: (123) 456-7890</p>
+                    Phone:<a href="tel:1234567890">(123) 456-7890</a></p>
             </div>
-        
-            <div class="contact-method">
-                <h2>Live Chat</h2>
-                <p>Need immediate assistance? Click on the chat icon at the bottom right corner of your screen to start a live chat with one of our representatives.</p>
-            </div>
-        
+
             <div class="contact-method">
                 <h2>Visit Us</h2>
                 <p>We'd love to see you in person! Our showroom and workshop are open to visitors.<br>
-                <strong>Address:</strong><br>
-                123 Kitchen Lane<br>
-                Culinary City, CA 12345</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8373.022810330069!2d-75.68088671710403!3d45.4082227104455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050f5059252f%3A0x22c3e2d535621f44!2sSaint%20Paul%20University!5e0!3m2!1sen!2sca!4v1716788776232!5m2!1sen!2sca" allowfullscreen="" class="map" height="450" width="600" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        
-                <p><strong>Showroom Hours:</strong><br>
-                Monday to Friday: 10 AM - 6 PM<br>
-                Saturday: 11 AM - 4 PM<br>
-                Sunday: Closed</p>
-            </div>
-        
-            <div class="contact-method social-links">
-                <h2>Follow Us</h2>
-                <p>Stay updated with our latest products, offers, and more by following us on social media:</p>
-                <p>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Pinterest</a>
+                    <strong>Address:</strong><br>
+                    223 Main St<br>
+                    Ottawa, ON K1S 1C4
                 </p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8373.022810330069!2d-75.68088671710403!3d45.4082227104455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050f5059252f%3A0x22c3e2d535621f44!2sSaint%20Paul%20University!5e0!3m2!1sen!2sca!4v1716788776232!5m2!1sen!2sca"
+                    allowfullscreen="" class="map" height="450" width="600" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <p><strong>Showroom Hours:</strong><br>
+                    Monday to Friday: 10 AM - 6 PM<br>
+                    Saturday: 11 AM - 4 PM<br>
+                    Sunday: Closed</p>
             </div>
-    </section>
+
+            <h2>Contact Us</h2>
+            <p>Please fill out the form below to get in touch with us.</p>
+            <p>We will respond to your inquiry as soon as possible.</p>
+            <form>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required autofocus><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number"><br>
+
+                    <label for="date">Preferred Contact Date:</label>
+                    <input type="date" id="date" name="date"><br>
+
+                    <label for="contact-method">Preferred Contact Method:</label><br>
+                    <input type="radio" id="email-method" name="contact-method" value="email" checked>
+                    <label for="email-method">Email</label><br>
+                    <input type="radio" id="phone-method" name="contact-method" value="phone">
+                    <label for="phone-method">Phone</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Inquiry Details</legend>
+                    <label for="inquiry-type">Inquiry Type:</label>
+                    <select id="inquiry-type" name="inquiry-type">
+                        <option value="general">General Inquiry</option>
+                        <option value="product">Product Information</option>
+                        <option value="support">Customer Support</option>
+                    </select><br>
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" placeholder="Your comments" rows="4"
+                        cols="50"></textarea><br>
+
+                    <label for="newsletter">Subscribe to Newsletter:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="subscribe"><br>
+                </fieldset>
+
+                <button type="submit">Submit Request</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Cutting Boards. All Rights Reserved.</p>
-		<p>Ramesh Kumawat. Student Number: c0941616</p>
-		<p>Request Information: <a href="mailto:contact@cuttingboard.net">contact@cuttingboard.net</a></p>
+        <p>Ramesh Kumawat. Student Number: c0941616</p>
+        <p>Request Information: <a href="mailto:contact@cuttingboard.net">contact@cuttingboard.net</a></p>
 
     </footer>
 </body>
+
 </html>
