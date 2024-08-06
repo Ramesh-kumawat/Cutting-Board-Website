@@ -7,14 +7,35 @@ body {
   background-blend-mode: overlay;
 }
 
+
+/* */ 
+
+.hamburger-menu {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21px;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* */
+
 header {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  padding: 0 20px;
   background-color: rgba(160, 81, 45, 0.522);
   border-bottom: 4px solid #fcfefe;
   position: fixed;
+  align-items: center;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -89,6 +110,29 @@ caption {
   background-color: #b2754f94;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+nav>ul{
+  display: flex;
+}
+
+.navbar a:hover {
+  color: #5d5d5d;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width:  25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color:rgb(217, 217, 217);
 }
 
 th,
@@ -402,10 +446,11 @@ audio,
 video {
   width: 100%;
   margin-top: 20px;
-  max-width: 700px;
   flex-direction: column;
   display: flex;
   justify-content: center;
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 .main {
@@ -417,7 +462,6 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
 }
 
 .video-container,
@@ -440,12 +484,6 @@ video {
   margin: 0 auto;
 }
 
-audio,
-video {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
 .team-member img {
   border-radius: 10px;
 }
@@ -462,6 +500,32 @@ video {
   justify-content: center;
   height: auto; /* Or any specific height you want */
   overflow: hidden;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 1em;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: #d9d4d4;
+  color: #000;
 }
 
 .product-images img {
@@ -482,21 +546,111 @@ video {
 /* Responsive Design */
 
 @media screen and (max-width: 768px) {
+
+  
+  .hamburger {
+    display: block;
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar{
+    position: fixed;
+    left: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgba(160, 81, 45, 0.522);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 999;
+}
+ .link {
+    margin: 16px 0;
+ }
+
+ .navbar.active {
+    left: 0;
+ }
+
+/* 
+  .hamburger-menu {
+    display: flex;
+}
+
+.nav{
+    display: none;
+    flex-direction: column;
+}
+
+.nav li {
+    margin: 10px 0;
+}
+
+.nav ul li {
+  margin: 0.5em 5px;
+}
+
+.nav.show {
+    flex-direction: column;
+    align-items: center;
+    display: block;
+} */
+
   header {
     flex-direction: column;
-    padding: 0;
-    display: block;
     position: sticky;
     align-items: center;
     top: auto;
   }
+
+  .hamburger {
+    display: block;
+    margin:  10px;;
+  }
+  
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+
+  .nav-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+/* 
+  .hamburger-menu {
+    margin-right: 15px;
+  } */
 
   .map {
     height: auto;
     width: 90%;
   }
 
-  nav ul {
+  .nav-menu ul {
     flex-direction: column;
     align-items: center;
     display: block;
@@ -508,7 +662,7 @@ video {
     margin-top: 20px;
   }
 
-  nav ul li {
+  .nav-menu ul li {
     margin: 0.5em 5px;
   }
 
